@@ -1,48 +1,11 @@
 import { Eye, Heart, Share2, Bed, Bath, Square } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import luxuryHome from "@/assets/luxury-home.jpg";
+import { properties } from "@/data/properties";
 
 export const FeaturedProperties = () => {
-  const properties = [
-    {
-      id: 1,
-      title: "Luxury Waterfront Estate",
-      price: "$3,250,000",
-      location: "Coral Gables, FL",
-      beds: 5,
-      baths: 4,
-      sqft: "4,200",
-      image: luxuryHome,
-      status: "Just Listed",
-      statusColor: "bg-green-500"
-    },
-    {
-      id: 2,
-      title: "Modern Miami Beach Condo",
-      price: "$1,850,000",
-      location: "Miami Beach, FL",
-      beds: 3,
-      baths: 3,
-      sqft: "2,100",
-      image: luxuryHome,
-      status: "New",
-      statusColor: "bg-blue-500"
-    },
-    {
-      id: 3,
-      title: "Pinecrest Family Home",
-      price: "$2,100,000",
-      location: "Pinecrest, FL",
-      beds: 4,
-      baths: 3,
-      sqft: "3,500",
-      image: luxuryHome,
-      status: "Featured",
-      statusColor: "bg-accent"
-    },
-  ];
 
   return (
     <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-accent/5">
@@ -69,7 +32,7 @@ export const FeaturedProperties = () => {
                 {/* Property Image */}
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
-                    src={property.image}
+                    src={property.images[0]}
                     alt={property.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -130,10 +93,12 @@ export const FeaturedProperties = () => {
                     <div className="font-display text-2xl font-bold text-foreground">
                       {property.price}
                     </div>
-                    <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300">
-                      <Eye className="w-4 h-4 mr-2" />
-                      View Details
-                    </Button>
+                    <Link to={`/property/${property.id}`}>
+                      <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300">
+                        <Eye className="w-4 h-4 mr-2" />
+                        View Details
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </Card>
