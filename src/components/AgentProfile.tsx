@@ -65,10 +65,25 @@ export const AgentProfile = () => {
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
                     <a 
-                      href="mailto:maria.callejas@floridamoves.com" 
+                      href="mailto:Maria@vlz.co" 
                       className="font-semibold text-primary hover:underline"
                     >
-                      maria.callejas@floridamoves.com
+                      Maria@vlz.co
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-center bg-secondary/10 rounded-lg px-4 py-3">
+                  <Home className="w-5 h-5 text-secondary mr-3" />
+                  <div>
+                    <p className="text-sm text-muted-foreground">Property Search</p>
+                    <a 
+                      href="https://sef.mlsmatrix.com/Matrix/public/IDX.aspx?idx=d169b18" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-secondary hover:underline"
+                    >
+                      Browse MLS Listings
                     </a>
                   </div>
                 </div>

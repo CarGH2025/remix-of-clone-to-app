@@ -41,8 +41,8 @@ export const Footer = () => {
               </div>
               <div className="flex items-center">
                 <Mail className="w-5 h-5 mr-3" />
-                <a href="mailto:maria.callejas@floridamoves.com" className="hover:text-secondary transition-colors">
-                  maria.callejas@floridamoves.com
+                <a href="mailto:Maria@vlz.co" className="hover:text-secondary transition-colors">
+                  Maria@vlz.co
                 </a>
               </div>
               <div className="flex items-center">
