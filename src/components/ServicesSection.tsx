@@ -110,7 +110,11 @@ export const ServicesSection = () => {
             </div>
 
             <div className="text-center">
-              <Button variant="luxury" size="lg">
+              <Button 
+                variant="luxury" 
+                size="lg"
+                onClick={() => window.open("https://sef.mlsmatrix.com/Matrix/public/IDX.aspx?idx=d169b18", "_blank")}
+              >
                 <Search className="w-5 h-5 mr-2" />
                 Explore Properties
               </Button>
