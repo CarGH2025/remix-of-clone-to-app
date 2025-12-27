@@ -169,7 +169,12 @@ export const FeaturedProperties = () => {
 
           {/* CTA */}
           <div className="text-center animate-fade-in">
-            <Button variant="luxury" size="lg" className="px-8">
+            <Button 
+              variant="luxury" 
+              size="lg" 
+              className="px-8"
+              onClick={() => window.open("https://sef.mlsmatrix.com/Matrix/public/IDX.aspx?idx=d169b18", "_blank")}
+            >
               View All Properties
             </Button>
           </div>
