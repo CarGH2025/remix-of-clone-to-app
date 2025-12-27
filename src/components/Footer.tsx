@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import coldwellLogo from "@/assets/coldwell-logo.png";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -27,9 +28,16 @@ export const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand & Contact */}
           <div className="space-y-6">
-            <div>
-              <h3 className="font-display text-2xl font-bold mb-2">Maria Callejas</h3>
-              <p className="text-primary-foreground/80">Luxury Real Estate Specialist</p>
+            <div className="flex items-center gap-3">
+              <img 
+                src={coldwellLogo} 
+                alt="Coldwell Banker" 
+                className="h-12 w-auto"
+              />
+              <div>
+                <h3 className="font-display text-2xl font-bold mb-1">Maria Callejas</h3>
+                <p className="text-primary-foreground/80">Luxury Real Estate Specialist</p>
+              </div>
             </div>
             
             <div className="space-y-3">
