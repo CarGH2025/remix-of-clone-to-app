@@ -10,8 +10,8 @@ export const HeroSection = () => {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle search logic here
-    console.log("Searching for:", searchQuery);
+    // Redirect to IDX property search
+    window.open("https://sef.mlsmatrix.com/Matrix/public/IDX.aspx?idx=d169b18", "_blank");
   };
 
   return (
