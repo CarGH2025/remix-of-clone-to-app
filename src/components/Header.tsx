@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import coldwellLogo from "@/assets/coldwell-logo.png";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,12 +19,19 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <div className="flex items-center">
-            <div className="font-display text-xl md:text-2xl font-bold text-white">
-              Maria Callejas
-            </div>
-            <div className="hidden md:block ml-3 text-white/80 text-sm">
-              Luxury Real Estate
+          <div className="flex items-center gap-3">
+            <img 
+              src={coldwellLogo} 
+              alt="Coldwell Banker" 
+              className="h-10 md:h-12 w-auto"
+            />
+            <div className="flex flex-col">
+              <div className="font-display text-xl md:text-2xl font-bold text-white">
+                Maria Callejas
+              </div>
+              <div className="hidden md:block text-white/80 text-sm">
+                Luxury Real Estate
+              </div>
             </div>
           </div>
 
